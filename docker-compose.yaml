@@ -1,0 +1,13 @@
+version: '2'
+services:
+  node-web:
+    build: .
+    image: node:13.11.0
+    container_name: node-web
+    ports: 
+      - "8123:8081"
+    tty: true
+    stdin_open: true
+    working_dir: /app
+    volumes:
+      - "./:/app"
